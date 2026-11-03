@@ -1,0 +1,309 @@
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--section-bg);
+    border-bottom: 2px solid var(--gold);
+    gap: 15px;
+}
+
+.details-header a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* PROJECT INTRODUCTION */
+
+.project-intro {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.subtitle {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.project-intro h1 {
+    color: var(--primary-blue);
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.project-intro h3 {
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.project-intro p {
+    color: var(--paragraph-color);
+    max-width: 650px;
+    margin: 10px auto;
+}
+
+
+/* PROJECT INFORMATION */
+
+.project-information {
+    padding: 60px 10%;
+    background: var(--section-bg);
+}
+
+.project-information h2,
+.artwork-section h2,
+.project-process h2,
+.tools-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.project-information > p {
+    color: var(--paragraph-color);
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+.project-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-box {
+    background: var(--card-bg);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--gold);
+    border-radius: 8px;
+}
+
+.info-box h3 {
+    color: var(--gold);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.info-box p {
+    color: var(--paragraph-color);
+}
+
+
+/* SKETCH AND DIGITAL ART SECTIONS */
+
+.artwork-section {
+    padding: 70px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading p:last-child {
+    color: var(--paragraph-color);
+}
+
+.artwork-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 950px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.artwork-card img {
+    display: block;
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    background: var(--light-blue);
+}
+
+.artwork-caption {
+    padding: 25px;
+}
+
+.artwork-caption h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.artwork-caption p {
+    color: var(--paragraph-color);
+    line-height: 1.7;
+}
+
+
+/* DESIGN PROCESS */
+
+.project-process {
+    background: var(--section-bg);
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.process-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.process-card span {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.process-card h3 {
+    color: var(--primary-blue);
+    margin: 12px 0;
+}
+
+.process-card p {
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+
+
+
+/* YOUR PORTFOLIO COLOR PALETTE */
+:root {
+    --navy: #133B68;
+    --blue: #477DB8;
+    --gold: #D6B450;
+    --soft-blue: #EAF1FA;
+    --off-white: #F8F9FC;
+    --dark: #202A38;
+}
+
+/* FOUR ARTWORK CONTAINERS */
+.artwork-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* INDIVIDUAL ARTWORK CARD */
+.artwork-card {
+    background-color: var(--off-white);
+    padding: 22px;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(19, 59, 104, 0.10);
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.artwork-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 8px 20px rgba(19, 59, 104, 0.15);
+}
+
+/* IMAGE */
+.artwork-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--soft-blue);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* ARTWORK TITLE */
+.artwork-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* OPTIONAL DESCRIPTION */
+.artwork-card p {
+    color: var(--dark);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .artwork-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* BACK TO PROJECTS */
+
+.back-project {
+    text-align: center;
+    padding: 40px;
+}
+
+.back-project a {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--gold);
+    color: #193B68;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    .details-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-intro h1 {
+        font-size: 32px;
+    }
+
+    .project-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artwork-section,
+    .project-information,
+    .project-process {
+        padding: 45px 6%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .project-info-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

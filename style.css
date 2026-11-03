@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+
+/* =================================
+   2. LIGHT AND DARK MODE COLORS
+================================= */
+
+:root {
+    --background: #F8F9FC;
+    --section-bg: #FFFFFF;
+    --text-color: #193B68;
+    --paragraph-color: #5E6E82;
+
+    --primary-blue: #477DB8;
+    --dark-blue: #193B68;
+    --gold: #D6B45D;
+    --light-blue: #EAF1FA;
+
+    --card-bg: #FFFFFF;
+    --border-color: #DCE4EF;
+}
+
+/* DARK MODE */
+
+body.dark-mode {
+    --background: #151E2B;
+    --section-bg: #202A38;
+    --text-color: #F1F5FA;
+    --paragraph-color: #B9C5D3;
+
+    --primary-blue: #79A9DF;
+    --dark-blue: #A9C8EE;
+    --gold: #E5C66F;
+    --light-blue: #29394D;
+
+    --card-bg: #202A38;
+    --border-color: #38495D;
+}
+
+
+/* =================================
+   3. HEADER AND NAVIGATION
+================================= */
+
+header {
+    background-color: var(--section-bg);
+    padding: 20px 8%;
+    border-bottom: 2px solid var(--gold);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 70%;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--gold);
+}
+
+
+/* =================================
+   4. HOME SECTION
+================================= */
+
+#home {
+    min-height: 550px;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro {
+    max-width: 550px;
+}
+
+.intro h1 {
+    font-size: 42px;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: var(--paragraph-color);
+    margin-bottom: 20px;
+}
+
+.intro a {
+    display: inline-block;
+    background-color: var(--gold);
+    color: #193B68;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-picture img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 6px solid var(--gold);
+    border-radius: 10px;
+}
+
+
+/* =================================
+   5. ABOUT ME SECTION
+================================= */
+
+#about {
+    background-color: var(--section-bg);
+    padding: 70px 10%;
+    text-align: center;
+}
+
+#about h2,
+#projects h2,
+#skills h2,
+#certificates h2,
+#contact h2 {
+    color: var(--primary-blue);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-content img {
+    width: 250px;
+    border: 4px solid var(--gold);
+    border-radius: 10px;
+}
+
+.about-content p {
+    color: var(--paragraph-color);
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   6. PROJECTS SECTION
+================================= */
+
+#projects {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-bottom: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    color: var(--primary-blue);
+    margin: 15px 0;
+}
+
+.project-card p {
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* PROJECT SEARCH BAR */
+.project-search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 550px;
+    margin: 0 auto 35px;
+}
+
+.project-search input {
+    flex: 1;
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    outline: none;
+    font-size: 15px;
+}
+
+.project-search input:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 8px rgba(71, 125, 184, 0.2);
+}
+
+.project-search button {
+    padding: 12px 20px;
+    background-color: var(--gold);
+    color: #193B68;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.project-search button:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* NO RESULTS MESSAGE */
+.no-projects {
+    color: var(--paragraph-color);
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* MOBILE SEARCH */
+@media screen and (max-width: 600px) {
+    .project-search {
+        flex-direction: column;
+    }
+
+    .project-search button {
+        width: 100%;
+    }
+}
+
+/* =================================
+   7. SKILLS SECTION
+================================= */
+
+#skills {
+    background-color: var(--section-bg);
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skills-container div {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    width: 50%;
+    text-align: left;
+}
+
+.skills-container h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.skills-container ul {
+    padding-left: 20px;
+    color: var(--paragraph-color);
+}
+
+.skills-container li {
+    padding: 7px;
+}
+
+
+/* =================================
+   8. CERTIFICATES SECTION
+================================= */
+
+#certificates {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.certificate-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.certificate-card:hover{
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 8px 20px rgba(19, 59, 104, 0.15);
+}
+
+.certificate-card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.certificate-card h3 {
+    color: var(--primary-blue);
+    margin: 10px;
+}
+
+.certificate-card p {
+    color: var(--paragraph-color);
+}
+
+.certificate-card a {
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* =================================
+   9. CONTACT SECTION
+================================= */
+
+#contact {
+    background-color: var(--section-bg);
+    padding: 70px 10%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--text-color);
+    text-decoration: none;
+
+    padding: 12px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.social-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.social-item:hover {
+    background-color: var(--light-blue);
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.social-item span {
+    font-weight: bold;
+}
+.social-links {
+    color: var(--paragraph-color);
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form h3 {
+    color: var(--gold);
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background-color: var(--gold);
+    color: #193B68;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* =================================
+   10. FOOTER
+================================= */
+
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =================================
+   11. RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home,
+    .about-content,
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-container div,
+    form {
+        width: 100%;
+    }
+
+    .certificate-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .profile-picture img {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--dark-blue);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+
+    nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 0;
+        background: var(--section-bg);
+    }
+
+    nav ul.show-menu {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
